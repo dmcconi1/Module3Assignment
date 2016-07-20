@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Assignment 3</title>
+    <link rel="stylesheet" type="text/css" href="styles/Assignment3.css" />
+ <script src="Js/Assignment3.js"></script>
+
+</head>
+
+<body>
+    <h1>Customer Current Orders Form  </h1>
+    <hr><br>
+   
+        <select onchange="MenuChoice(value)" id="menu">
+            <option value="None">Please select an option</option>
+            <option value="customerlist">Customer Information List</option>
+            <option value="currentorders">Current Orders by Customer</option>
+            <option value="updateorders">Update Current Orders</option>
+        </select>
+    <hr><br>    
+
+
+<section id="customerlist">
+    <h2>Customer Information List</h2><br>
+    
+    <div id="customerinfo"></div>
+</section>
+
+<section id="currentorders">
+    <h2>Current Orders by Customer</h2><br>
+    <button onclick="MenuChoice('customerlist')">Back</button><br>
+    <label>Please Enter a Customer ID: </label>
+    <input type="text" id="customerid">
+    <br>
+    <button onclick="CurrentOrdersbyInput(customerid)">Retrieve Customer's Current Orders</button>
+    <br>
+    <hr>
+    <br>
+    <label id="customerorder"></label>
+</section>
+
+
+<section id="updateorders">
+    <h2>Update Current Order</h2><br>
+    <label>Please Enter an Order ID: </label>
+    <input type="text" id="orderId" disabled="true">
+    <br>
+    <label>Please Enter the Shipping Address: </label>
+    <input type="text" id="shipAddress">
+    <br>
+    <label>Pleaes enter the Ship to City: </label>
+    <input type="text" id="shipCity">
+    <br>
+    <label>Pleaes enter the Ship to Name: </label>
+    <input type="text" id="shipName">
+    <br>
+    <label>Pleaes enter the Shipping Postal Code: </label>
+    <input type="text" id="shipZip">
+    <br>
+    <button onclick="UpdateOrder()">Update an Existing Order's information</button>
+    <br>
+    
+</section>
+
+
+
+
+<footer> <p> David L. McConico <br/> dmcconi1@uab.edu <br>
+
+
+
+
+</body>
+</html>
